@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<style>
+button {
+	width: 80px;
+	height: 30px;
+}
+</style>
+<body>
+	<button onclick="jeff()">Click Me!</button>
+	<p id="txt"></p>
+	<script>
+		var str = "ADITHYA";
+		var index = 0;
+		function jeff(){
+			var text = document.getElementById("txt");
+			var toAppend = str.charAt(index).toString();
+			index++;
+			if(index >= str.length){
+				index = 0;
+				toAppend += "! ";
+			}
+			var letter = document.createTextNode(toAppend);
+			text.appendChild(letter);
+		}
+	</script>
+</body>
+</html>
